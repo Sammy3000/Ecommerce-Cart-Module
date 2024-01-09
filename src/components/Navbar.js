@@ -2,9 +2,11 @@ import { useSelector } from "react-redux";
 
 const Navbar=()=>{
     return(
-        <div>
-          <h2>Redux toolkit</h2>
-        </div>
+        <nav>
+            <div className="nav-center">
+            <h3>Redux toolkit</h3>
+            </div>
+        </nav>
     )
 }
 export default Navbar
