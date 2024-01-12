@@ -28,8 +28,15 @@ return(
                       )
             }
         </div>
+        <footer>
+            <hr/>
+            <h4>
+                total <span>${total}</span>
+            </h4>
+        </footer>
     </section>
 )
+
 }
  
 export default CartContainer
