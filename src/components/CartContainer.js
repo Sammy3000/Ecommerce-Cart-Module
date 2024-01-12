@@ -1,7 +1,9 @@
 import CartItem from "./CartItem"
 const CartContainer=()=>{
 return(
-<div></div>
+<div>
+    Cart container
+</div>
 )
 }
  
