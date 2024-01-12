@@ -20,6 +20,14 @@ return(
         <header>
             <h2>your bag</h2>
         </header>
+        <div>
+            {
+                cartItems.map(item=>{
+                    return <CartItem key={item.id} {...item} />
+                }
+                      )
+            }
+        </div>
     </section>
 )
 }

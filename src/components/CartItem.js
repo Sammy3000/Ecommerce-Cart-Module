@@ -1,7 +1,9 @@
  
  const CartItem=()=>{
     return(
-        <div></div>
+        <div>
+            Cart Item
+        </div>
     )
  }
  export default CartItem
