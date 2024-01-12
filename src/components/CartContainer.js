@@ -16,9 +16,11 @@ const CartContainer=()=>{
     }
 
 return(
-<div>
-    Cart container
-</div>
+    <section className="cart">
+        <header>
+            <h2>your bag</h2>
+        </header>
+    </section>
 )
 }
  
