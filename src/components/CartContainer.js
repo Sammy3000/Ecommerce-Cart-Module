@@ -36,6 +36,9 @@ return(
             </h4>
 
             </div>
+            <button className="btn clear-btn">
+                clear cart
+            </button>
         </footer>
     </section>
 )
