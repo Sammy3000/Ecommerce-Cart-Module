@@ -11,6 +11,7 @@
         </div>
         <div>
             <button className="amount-btn"><ChevronUp/></button>
+            <p className="amount">{amount}</p>
             <button className="amount-btn"><ChevronDown/></button>
         </div>
        </article>
