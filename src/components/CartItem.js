@@ -2,9 +2,9 @@
  
  const CartItem=({id,title,price,img,amount})=>{
     return(
-        <div>
-            Cart Item
-        </div>
+       <article className="cart-item">
+
+       </article>
     )
  }
  export default CartItem
