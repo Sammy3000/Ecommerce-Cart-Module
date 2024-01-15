@@ -3,6 +3,7 @@
  const CartItem=({id,title,price,img,amount})=>{
     return(
        <article className="cart-item">
+        <img src={img} alt={title}/>
 
        </article>
     )
