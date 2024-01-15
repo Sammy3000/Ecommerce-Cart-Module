@@ -9,6 +9,10 @@
             <h4 className="item-price">{price}</h4>
             <button className="remove-btn">remove</button>
         </div>
+        <div>
+            <button className="amount-btn"><ChevronUp/></button>
+            <button className="amount-btn"><ChevronDown/></button>
+        </div>
        </article>
     )
  }
