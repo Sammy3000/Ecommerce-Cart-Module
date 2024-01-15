@@ -1,7 +1,9 @@
  import { ChevronDown,ChevronUp } from "../icons"
  import { removeItem } from "../features/cart/cartSlice"
+ import { useDispatch } from "react-redux"
  
  const CartItem=({id,title,price,img,amount})=>{
+    const dispatch=useDispatch();
     return(
        <article className="cart-item">
         <img src={img} alt={title}/>
