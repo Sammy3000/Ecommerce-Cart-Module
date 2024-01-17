@@ -19,7 +19,7 @@ const cartSlice=createSlice({
         },
         removeItem:(state,{payload})=>{
             const itemId=payload
-            state.cartItems=state.cartItems.filter(item=>item.id!=itemId)
+            state.cartItems=state.cartItems.filter(item=>item.id!==itemId)
         }
     }
 
