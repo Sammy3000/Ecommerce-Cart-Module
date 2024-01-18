@@ -20,10 +20,13 @@ const cartSlice=createSlice({
         removeItem:(state,{payload})=>{
             const itemId=payload
             state.cartItems=state.cartItems.filter(item=>item.id!==itemId)
+        },
+        increase:(state,{payload})=>{
+            console.log(payload.id);
         }
     }
 
 })
-export const {clearCart,removeItem}= cartSlice.actions
+export const {clearCart,removeItem,increase}= cartSlice.actions
 
 export default cartSlice.reducer
