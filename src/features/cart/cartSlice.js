@@ -22,7 +22,8 @@ const cartSlice=createSlice({
             state.cartItems=state.cartItems.filter(item=>item.id!==itemId)
         },
         increase:(state,{payload})=>{
-            console.log(payload.id);
+            const cartItem = state.cartItems.find(item=>item.id===payload)
+            cartItem.amount =cartItem.amount + 1
         }
     }
 
