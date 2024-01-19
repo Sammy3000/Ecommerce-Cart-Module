@@ -15,7 +15,7 @@
         <div>
             <button className="amount-btn" onClick={()=>dispatch(increase(id))}><ChevronUp/></button>
             <p className="amount">{amount}</p>
-            <button className="amount-btn"><ChevronDown/></button>
+            <button className="amount-btn" onClick={()=>dispatch(decrease(id))}><ChevronDown/></button>
         </div>
        </article>
     )
