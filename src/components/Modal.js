@@ -3,9 +3,9 @@ import React from "react";
 const Modal = ()=>{
 
     return(
-        <div>
+        <aside className="modal-container">
 
-        </div>
+        </aside>
     )
 }
 
