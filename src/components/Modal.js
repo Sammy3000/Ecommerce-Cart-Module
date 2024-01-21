@@ -8,6 +8,7 @@ const Modal = ()=>{
                 <h4>Remove all items from the shopping cart</h4>
                 <div className="btn-container">
                     <button type="button" className="btn confirm-btn">confirm</button>
+                    <button type="button" className="btn clear-btn">cancel</button>
                 </div>
             </div>
 
