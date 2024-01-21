@@ -4,7 +4,9 @@ const Modal = ()=>{
 
     return(
         <aside className="modal-container">
-            <div className="modal"></div>
+            <div className="modal">
+                <h4>Remove all items from the shopping cart</h4>
+            </div>
 
 
         </aside>
