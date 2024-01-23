@@ -16,7 +16,7 @@ function App() {
 
   return (
     <main>
-      <Modal/>
+      {isOpen && <Modal/>}
       <Navbar/>
       <CartContainer/>
     </main>
