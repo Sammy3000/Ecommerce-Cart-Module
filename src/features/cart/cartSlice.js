@@ -52,10 +52,10 @@ const cartSlice=createSlice({
             state.isLoading = true;
         },
         [getCartItems.fulfilled]:(state,action)=>{
-            state.isLoading = true;
+            state.isLoading = false;
         },
         [getCartItems.rejected]:(state)=>{
-            state.isLoading = true;
+            state.isLoading = false;
         }
 
 
