@@ -46,6 +46,9 @@ const cartSlice=createSlice({
             state.amount=amount
             state.total=total
         }
+    },
+    extraReducers:{
+        
     }
 
 })
