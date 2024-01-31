@@ -1,8 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
-
-
-const url = 'https://course-api.com/react-useReducer-cart-project';
 
 const initialState = {
     isOpen:false
