@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const url = 'https://course-api.com/react-useReducer-cart-project';
+
 const initialState = {
     isOpen:false
 }
