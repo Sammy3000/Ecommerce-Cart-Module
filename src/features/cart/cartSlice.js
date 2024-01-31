@@ -48,7 +48,18 @@ const cartSlice=createSlice({
         }
     },
     extraReducers:{
-        
+        [getCartItems.pending]:(state)=>{
+            state.isLoading = true;
+        },
+        [getCartItems.fulfilled]:(state,action)=>{
+            state.isLoading = true;
+        },
+        [getCartItems.rejected]:(state)=>{
+            state.isLoading = true;
+        }
+
+
+
     }
 
 })
