@@ -51,10 +51,10 @@ const cartSlice=createSlice({
        builder.addCase(getCartItems.pending,(state)=>{
         state.isLoading = true;
        })
-       .addCase(getCartItems.fulfilled,(state,action)=>{
+       .addCase(getCartItems.fulfilled,(state,{payload})=>{
         console.log(action);
         state.isLoading = false;
-        state.cartItems = action.payload
+        state.cartItems = payload
        })
         .addCase(getCartItems.fulfilled,(state)=>{
         state.isLoading = false;
