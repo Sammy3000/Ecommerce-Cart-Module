@@ -9,7 +9,7 @@ export const getCartItems = createAsyncThunk('cart/getCartItems',async()=>{
     return response.data
     
    } catch (error) {
-    
+    return thunkAPI.rejectWithValue('something went wrong');
    }
 })
 
