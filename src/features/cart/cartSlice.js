@@ -2,11 +2,11 @@ import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 import cartItems from "../../CartItems";
 import axios from "axios";
 
-// const url = 'https://course-api.com/react-useReducer-cart-project';
-// export const getCartItems = createAsyncThunk('cart/getCartItems',async()=>{
-//     const response = await axios(`${url}/cart`);
-//     return response.data
-// })
+const url = 'https://course-api.com/react-useReducer-cart-project';
+export const getCartItems = createAsyncThunk('cart/getCartItems',async()=>{
+    const response = await axios(`${url}/cart`);
+    return response.data
+})
 
 const initialState={
     cartItems:[],
@@ -47,19 +47,19 @@ const cartSlice=createSlice({
             state.total=total
         }
     },
-    // extraReducers:(builder)=>{
-    //    builder.addCase(getCartItems.pending,(state)=>{
-    //     state.isLoading = true;
-    //    })
-    //    .addCase(getCartItems.fulfilled,(state,{payload})=>{
-    //     state.isLoading = false;
-    //     state.cartItems = payload
-    //    })
-    //     .addCase(getCartItems.fulfilled,(state)=>{
-    //     state.isLoading = false;
-    //    })
+    extraReducers:(builder)=>{
+       builder.addCase(getCartItems.pending,(state)=>{
+        state.isLoading = true;
+       })
+       .addCase(getCartItems.fulfilled,(state,{payload})=>{
+        state.isLoading = false;
+        state.cartItems = payload
+       })
+        .addCase(getCartItems.fulfilled,(state)=>{
+        state.isLoading = false;
+       })
 
-    // }
+    }
 
 })
 export const {clearCart,removeItem,increase,decrease,calculateTotals}= cartSlice.actions
