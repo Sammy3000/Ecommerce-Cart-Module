@@ -3,9 +3,14 @@ import axios from "axios";
 
 const url = 'https://course-api.com/react-useReducer-cart-project';
 export const getCartItems = createAsyncThunk('cart/getCartItems',async()=>{
+   try {
     const response = await axios(url);
     console.log(response.data);
     return response.data
+    
+   } catch (error) {
+    
+   }
 })
 
 const initialState={
