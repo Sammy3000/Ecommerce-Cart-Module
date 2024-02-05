@@ -5,7 +5,6 @@ const url = 'https://course-api.com/react-useReducer-cart-project';
 export const getCartItems = createAsyncThunk('cart/getCartItems',async(thunkAPI)=>{
    try {
     const response = await axios(url);
-    console.log(response.data);
     return response.data
     
    } catch (error) {
@@ -49,20 +48,21 @@ const cartSlice=createSlice({
             state.amount=amount
             state.total=total
         }
-    },
-    extraReducers:(builder)=>{
-       builder.addCase(getCartItems.pending,(state)=>{
-        state.isLoading = true;
-       })
-       .addCase(getCartItems.fulfilled,(state,{payload})=>{
-        state.isLoading = false;
-        state.cartItems = payload
-       })
-        .addCase(getCartItems.fulfilled,(state)=>{
-        state.isLoading = false;
-       })
-
-    }
+    },extraReducers: (builder) => {
+        builder
+          .addCase(getCartItems.pending, (state) => {
+            state.isLoading = true;
+          })
+          .addCase(getCartItems.fulfilled, (state, action) => {
+            // console.log(action);
+            state.isLoading = false;
+            state.cartItems = action.payload;
+          })
+          .addCase(getCartItems.rejected, (state, action) => {
+            console.log(action);
+            state.isLoading = false;
+          });
+      },
 
 })
 export const {clearCart,removeItem,increase,decrease,calculateTotals}= cartSlice.actions
