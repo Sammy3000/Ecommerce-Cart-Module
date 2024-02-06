@@ -59,7 +59,7 @@ const cartSlice=createSlice({
             state.cartItems = payload;
           })
           .addCase(getCartItems.rejected, (state, action) => {
-            console.log(action);
+            // console.log(action);
             state.isLoading = false;
           });
       },
